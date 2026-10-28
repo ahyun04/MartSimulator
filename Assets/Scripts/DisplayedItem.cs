@@ -4,6 +4,8 @@ using TMPro;
 
 public class DisplayedItem : MonoBehaviour
 {
+    public DisplayZone displayZone;
+    public int slotIndex = -1;
     [Header("판매 가격")]
     [Min(0)]
     public int price = 100;

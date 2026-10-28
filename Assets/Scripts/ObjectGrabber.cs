@@ -174,6 +174,15 @@ public class ObjectGrabber : MonoBehaviour
         targetObject = null;
         targetZone = null;
         heldSlotIndex = -1;
+
+        DisplayedItem displayedItem =
+             rb.GetComponent<DisplayedItem>();
+
+        if (displayedItem == null)
+            displayedItem = rb.gameObject.AddComponent<DisplayedItem>();
+
+        displayedItem.displayZone = zone;
+        displayedItem.slotIndex = slotIndex;
     }
 
 
