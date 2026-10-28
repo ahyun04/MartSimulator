@@ -133,6 +133,10 @@ public class CustomerAI : MonoBehaviour
             item.displayZone.SetSlotOccupied(item.slotIndex, false);
         }
 
+        if (PlayerWallet.Instance != null)
+        {
+            PlayerWallet.Instance.AddMoney(item.price);
+        }
         // 상품과 가격표 제거
         Destroy(item.gameObject);
     }
