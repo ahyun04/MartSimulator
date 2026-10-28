@@ -2,7 +2,7 @@
 - Project name: MartSimulator
 - Unity version: Unity 2022.3.60f1
 - Active game object:
-  - Name: Bar_001
+  - Name: Customer
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
