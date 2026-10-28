@@ -18,7 +18,8 @@ public class ObjectGrabber : MonoBehaviour
 
     private bool originalUseGravity;
     private bool originalIsKinematic;
-
+    [Header("가격 설정")]
+    public DisplayPricePopup pricePopup;
     void Update()
     {
         if (playerCamera == null) return;
@@ -161,6 +162,12 @@ public class ObjectGrabber : MonoBehaviour
 
         // 해당 칸을 사용 중으로 표시
         zone.SetSlotOccupied(slotIndex, true);
+
+        // 진열 직후 가격 설정 팝업 열기
+        if (pricePopup != null)
+        {
+            pricePopup.Open(rb.gameObject);
+        }
 
         // 잡기 상태 해제
         heldObject = null;
